@@ -38,6 +38,7 @@ public class FilmController {
         return ResponseEntity.ok(filmsPage);
     }
 
+    @PreAuthorize(value = "hasAnyAuthority('AUTHORIZED')")
     @GetMapping(value = "/{uid}")
     public ResponseEntity<FilmsResult>getById(@PathVariable String uid) throws IOException, InterruptedException {
         FilmsResult filmsResults = filmService.getById(uid);
