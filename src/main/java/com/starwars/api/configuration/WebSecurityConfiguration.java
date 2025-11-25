@@ -24,10 +24,10 @@ public class WebSecurityConfiguration{
         http.authorizeHttpRequests(authorize -> authorize
                 .requestMatchers(HttpMethod.POST, "/api/user").permitAll()
                 .requestMatchers(HttpMethod.POST,"/api/login").permitAll()
-                .requestMatchers(HttpMethod.POST,"/api/films").permitAll()
-                .requestMatchers(HttpMethod.POST,"/api/starhips").permitAll()
-                .requestMatchers(HttpMethod.POST,"/api/vehicles").permitAll()
-                .requestMatchers(HttpMethod.POST,"/api/people").permitAll()
+                .requestMatchers(HttpMethod.POST,"/api/films/").permitAll()
+                .requestMatchers(HttpMethod.POST,"/api/starhips/").permitAll()
+                .requestMatchers(HttpMethod.POST,"/api/vehicles/").permitAll()
+                .requestMatchers(HttpMethod.POST,"/api/people/").permitAll()
                 .anyRequest().authenticated()
         );
 
